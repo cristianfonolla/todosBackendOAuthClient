@@ -164,6 +164,17 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
+         * Acacha Llum Service Providers...
+         *
+         * See: https://github.com/acacha/llum
+         */
+        Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Spatie\Menu\Laravel\MenuServiceProvider::class,
+        #llum_providers
+
+        /*
          * Package Service Providers...
          */
 
@@ -225,6 +236,18 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        /*
+         * Acacha Llum Aliases...
+         *
+         * See: https://github.com/acacha/llum
+         */
+        'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Menu' => Spatie\Menu\Laravel\MenuFacade::class,
+        'Link' => Spatie\Menu\Laravel\Link::class,
+        'Html' => Spatie\Menu\Laravel\Html::class,
+        #llum_aliases
 
     ],
 
