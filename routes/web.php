@@ -28,6 +28,19 @@ Route::get('/redirect', function () {
 });
 
 
+Route::get('/redirect2', function () {
+    $query = http_build_query([
+        'client_id' => '1',
+        'redirect_uri' => 'http://oauthclient.dev:8082/auth/callback',
+        'response_type' => 'code',
+        'scope' => '',
+    ]);
+
+    return redirect('http://localhost:8081/oauth/authorize?'.$query);
+
+});
+
+
 Route::get('/auth/callback', function () {
     $http = new GuzzleHttp\Client;
 
